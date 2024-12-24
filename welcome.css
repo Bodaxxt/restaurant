@@ -1,0 +1,136 @@
+/* Resetting styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/home_bg.jpeg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+    
+    
+.im {
+    display: flex;
+    position: absolute; /* لتحديد الموقع بشكل مطلق */
+    top: 20px; /* المسافة من الأعلى */
+    left: 20px; /* المسافة من اليسار */
+    align-items: center; /* محاذاة العناصر داخل الفليكس */
+}
+
+.im img {
+    width: 100px; /* عرض الصورة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+}
+
+.t{
+    width: 290px;
+}
+.c .text {
+    position: relative;
+    color: rgb(255, 165, 0); /* البرتقالي الغامق */
+    font-size: 40px;
+    font-weight: 600; 
+    width: 100%;
+    white-space: nowrap; /* لمنع النص من الانتقال لسطر جديد */
+}
+
+.c .text.first-text {
+    color: white; /* لون النص */
+    font-size: 50px; /* حجم الخط */
+    font-weight: 700; /* سمك الخط */
+    display: inline-block; /* لتظهر النصوص بجانب بعضها */
+    width: auto; /* تكييف العرض مع النص */
+    letter-spacing: 2px; /* تباعد بين الحروف */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* ظل للنص */
+    white-space: nowrap; /* منع تقسيم النص */
+}
+
+.c .text.sect-text {
+    font-weight: 700; 
+    overflow: hidden;
+    display: inline-block; /* تظهر الكلمة بجانب النص الأول */
+    vertical-align: top;
+    width: auto; /* تحديد العرض ديناميكيًا بناءً على النص */
+    color: rgb(255, 165, 0); /* البرتقالي الغامق */
+    border-right: 2px solid rgb(255, 165, 0); /* البرتقالي الغامق */
+    animation: typing 4s steps(20, end) infinite alternate, blink 0.5s step-end infinite;
+    white-space: nowrap; /* منع النص من الانفصال */
+}
+
+
+.button-container {
+    margin: 50px;
+    display: flex;
+}
+
+.btn {
+    background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(200, 100, 0, 1)); /* تدرج برتقالي */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: rgb(255, 165, 0); /* البرتقالي الغامق */
+    }
+    to {
+        border-color: transparent;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.c .text {
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.c .text.sect-text:hover {
+    text-shadow: 0px 5px 10px rgba(255, 165, 0, 0.8); /* البرتقالي الغامق */
+    transform: scale(1.1);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}

@@ -1,0 +1,116 @@
+/* Resetting styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 204, 102, 0.8)); /* تدرج برتقالي */
+    overflow: hidden;
+}
+
+/* Form Container */
+.login-container {
+    width: 400px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9); /* جعل الخلفية أكثر وضوحًا */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Profile Icon */
+.immg {
+    width: 100px;
+    margin: -60px auto 20px;
+    display: block;
+}
+
+/* Title */
+.title {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Input Boxes */
+.input-box {
+    margin: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+.input-box .input {
+    width: 100%;
+    height: 40px;
+    padding-left: 50px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    color: #333;
+    transition: background 0.3s ease;
+}
+
+.input-box .input:focus {
+    background: rgba(255, 255, 255, 1); /* تغيير الخلفية عند التركيز */
+}
+
+.input-box span {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.input-box span img {
+    width: 20px;
+    opacity: 0.7;
+}
+
+/* Buttons */
+button {
+    background-color: rgb(255, 165, 0); /* لون برتقالي */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%; /* جعل الزر بعرض كامل */
+}
+
+button:hover {
+    background-color: rgb(255, 120, 0); /* لون أغمق عند التحويم */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 120, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 15px;
+    }
+}
